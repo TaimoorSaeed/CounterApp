@@ -22,14 +22,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func subAction(_ sender: AnyObject) {
-        count.self = count - 1
-        labelOutlet.text = String(count)
+        if(count > 0){
+            count.self = count - 1
+            labelOutlet.text = String(count)
+        }
+        
     }
     
-    @IBAction func resetbtn(_ sender: AnyObject) {
+    
+    @IBAction func refreshBtn(_ sender: AnyObject) {
         count.self = 0
         labelOutlet.text = String(count)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         labelOutlet.text = String(0)
